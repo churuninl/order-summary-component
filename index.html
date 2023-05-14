@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Frontend Mentor | Order summary card</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Red Hat Display';
+      font-size: 1rem;
+      background-image: url(images/bg.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primpale: 'hsl(225, 100%, 94%)',
+            primbright: 'hsl(245, 75%, 52%)',
+            primbrighta: 'hsla(245, 75%, 52%, 0.3)',
+            primbrightb: 'hsla(245, 75%, 52%, 0.1)',
+            verypaleblue: 'hsl(225, 100%, 98%)',
+            desaturatedblue: 'hsl(224, 23%, 55%)',
+            darkblue: 'hsl(223, 47%, 23%)',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="h-screen flex items-center justify-center">
+    <div class="max-w-sm bg-white rounded-2xl shadow-lg shadow-primbrightb">
+      <img class="w-full rounded-t-2xl" src="images/illustration-hero.svg">
+      <div class="p-9 flex flex-col">
+        <h1 class="text-darkblue text-2xl text-center font-black">Order Summary</h1>
+        <p class="my-5 max-w-xs text-sm text-desaturatedblue text-center">You can now listen to millions of songs, audiobooks, and
+          podcasts on any
+          device anywhere you like!</p>
+
+        <div class="p-6 bg-verypaleblue rounded-xl flex justify-between items-center text-sm">
+          <div class="flex gap-5">
+            <img class="w-10 h-10" src="images/icon-music.svg">
+            <div>
+              <h2 class="font-black">Annual Plan</h2>
+              <p class="text-desaturatedblue">$59.99/year</p>
+            </div>
+          </div>
+          <a class="underline text-xs text-primbright font-bold" href="#">Change</a>
+        </div>
+
+
+        <button class="p-3 my-6 rounded-xl bg-primbright text-white text-sm font-bold shadow-lg shadow-primbrighta">Proceed to Payment</button>
+        <a class="text-desaturatedblue text-sm font-black text-center" href="#">Cancel Order</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
